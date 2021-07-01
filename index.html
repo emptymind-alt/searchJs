@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .super {
+           margin-left:200px;
+       }
+       
+        .tongu {
+            border : 1px solid black;
+            content: center;
+            margin:200px;
+            margin-top:100px;
+        }
+        
+        td {
+            border :1px solid black;
+
+          
+        }
+        </style>
+</head>
+<body>
+    <h2 style = "text-align: center; color:blue">My mate </h2>
+
+    <div class ="super">
+        <label>search name </label>
+    <input type = "text"  id = "myInput" placeholder = "name" onKeyup= "searchFun()" >
+    </div>
+    <div class = "hero">
+    <table id ="myTable" class ="tongu">
+        <tr class = "header">
+            <th style ="width:40%";>Name </th>
+            <th style ="width:40%";>Degree</th>
+            <th style ="width:40%";>Profesion </th>
+        </tr>
+          <tr class = "header">
+              <td>Ayan</td>
+              <td>MCA</td>
+              <td>Backend Developer </td>
+              </tr>  
+              <tr class = "header">
+                <td>sagar</td>
+                <td>BCA</td>
+                <td>customer care </td>
+                </tr>  
+                <tr>
+                    <td>Baidya</td>
+                    <td>BBA</td>
+                    <td>Business </td>
+                    </tr>  
+                    <tr>
+                        <td>Chandan</td>
+                        <td>MCA</td>
+                        <td>serach Developer </td>
+                        </tr>  
+                        <tr>
+                            <td>Kalyan</td>
+                            <td>MCA</td>
+                            <td>java Developer </td>
+                            </tr>  
+                            <tr>
+                                <td>soumya</td>
+                                <td>MCA</td>
+                                <td>Java Developer </td>
+                                </tr>  
+                                <tr>
+                                    <td>subhendu</td>
+                                    <td>MCA</td>
+                                    <td>Search Developer </td>
+                                    </tr>  
+                                    <tr>
+                                        <td>Balia</td>
+                                        <td>Odia</td>
+                                        <td>Writter </td>
+                                        </tr>  
+                                        <tr>
+                                            <td>papali Bhai</td>
+                                            <td>BSC</td>
+                                            <td>Teacher</td>
+                                            </tr>  
+                                            <tr>
+                                                <td>Mami</td>
+                                                <td>BSC</td>
+                                                <td>Teacher </td>
+                                                </tr>  
+                                                <tr>
+                                                    <td>Omm</td>
+                                                    <td>MSC</td>
+                                                    <td>Zoologist </td>
+                                                    </tr>  
+                                                    <tr>
+                                                        <td>jeeban</td>
+                                                        <td>B.tech</td>
+                                                        <td>Business </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td>Karisma</td>
+                                                            <td>Mca</td>
+                                                            <td>Executive officer</td>
+                                                            </tr>  
+                                                            <tr>
+                                                                <td>Alok</td>
+                                                                <td>MCA</td>
+                                                                <td>.Net Developer </td>
+                                                                </tr>  
+                                                    </table>
+                                                    </div>
+                                                
+      <script>
+         function searchFun  () {
+              let filter = document.getElementById ('myInput').value.toUpperCase();
+
+              let myTable = document.getElementById ('myTable');
+
+              let tr = myTable. getElementsByTagName ('tr');
+              for (var i =0; i<tr.length; i++){
+                  let td = tr[i].getElementsByTagName ('td')[0];
+
+                  if (td){
+                      let text = td.textContent || td.innerHTML;
+
+                      if (text.toUpperCase().indexOf(filter)> -1){
+                          tr[i].style.display = "";
+                      
+                      }else {
+                          tr[i].style.display = "none";
+                      }
+                  }
+              }
+          }
+      
+      </script>  
+    
+</body>
+</html>
